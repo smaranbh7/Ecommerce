@@ -1,6 +1,6 @@
 # 🛒 E-Commerce Backend API - Spring Boot
 
-A RESTful backend API for an e-commerce platform built using **Spring Boot**. This backend handle product listing,updating, searching cart operations, and more.
+A RESTful backend API for an e-commerce platform built using **Spring Boot**. This backend handle product listing,updating, searching, cart operations, and more.
 
 ## 🔧 Tech Stack
 
