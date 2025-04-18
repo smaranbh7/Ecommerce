@@ -5,7 +5,6 @@ import com.smaran.ecomproject.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -86,6 +85,14 @@ public class ProductController {
         }else{
             return new ResponseEntity<>("Item not found!", HttpStatus.NOT_FOUND);
         }
+    }
+
+    @GetMapping("/products/search")
+    public ResponseEntity<List<Product>> searchProduct(@RequestParam String keyword){
+        System.out.println("Searching with "+ keyword);
+        List<Product> products = service.searchProducts(keyword);
+        return new ResponseEntity<>(products, HttpStatus.OK);
+
     }
 
 }
